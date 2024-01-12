@@ -34,7 +34,7 @@ export const SearchBar = ({ onSearchChange }) => {
 
   return (
     <AsyncPaginate
-      className="pt-10"
+      className="pt-10 w-[250px]"
       placeholder="Search for city"
       debounceTimeout={600}
       value={search}
