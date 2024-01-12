@@ -54,7 +54,7 @@ function App() {
       <div className="flex flex-col items-center gap-10 bg-gradient-to-t from-slate-800 to-slate-500 min-h-screen ">
         <SearchBar onSearchChange={handleOnSearchChange} />
         {currentWeather ? (
-          <div className="lg:flex flex-row gap-4">
+          <div className="lg:flex lg:flex-row lg:gap-4 flex flex-col gap-7">
             <CityCard data={currentWeather} icon={icon} />
           </div>
         ) : (
