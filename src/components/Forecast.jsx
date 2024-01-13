@@ -7,10 +7,9 @@ export const Forecast = ({ data, icon }) => {
   const dateString = dt_txt;
   const date = new Date(dateString);
 
-  // Get the day of the week as a number (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
   const dayOfWeekNumber = date.getDay();
 
-  // Create an array with the names of the days of the week
+  
   const dayNames = [
     "Sunday",
     "Monday",
@@ -21,7 +20,6 @@ export const Forecast = ({ data, icon }) => {
     "Saturday",
   ];
 
-  // Get the name of the day of the week using the obtained number
   const dayOfWeekName = dayNames[dayOfWeekNumber];
 
   const timeString = date.toLocaleTimeString("en-US", {
@@ -36,7 +34,7 @@ export const Forecast = ({ data, icon }) => {
       className="w-[340px] h-[104px] rounded-md
     bg-slate-400 flex flex-col p-[20px] relative text-white shadow-lg lg:w-[200px]"
     >
-      <p>{dateTimeString}</p>
+      <p className="font-semibold">{dateTimeString}</p>
       <p className="font-semibold">{Math.round(main.temp)}°C</p>
       <p className="">{weather[0].description}</p>
       <img

@@ -93,6 +93,7 @@ function App() {
             No data available yet. Do a search for weather 🌤️ information.
           </div>
         )}
+        <footer className="pb-[30px] text-white">Made by Miguel Dario Garcia Quintas</footer>
       </div>
     </>
   );
