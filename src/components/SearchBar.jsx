@@ -9,7 +9,7 @@ export const SearchBar = ({ onSearchChange }) => {
   const loadOptions = async (inputValue) => {
     try {
       const response = await fetch(
-        `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+        `${GEO_API_URL}/cities?minPopulation=10000&namePrefix=${inputValue}`,
         GeoApiOptions
       );
       const result = await response.json();
@@ -17,7 +17,7 @@ export const SearchBar = ({ onSearchChange }) => {
         options: result.data.map((city) => {
           return {
             latitude: `${city.latitude}`,
-            longitude:`${city.longitude}`,
+            longitude: `${city.longitude}`,
             label: `${city.name}, ${city.countryCode}`,
           };
         }),
