@@ -54,7 +54,7 @@ function App() {
       <div className="flex flex-col items-center gap-10 bg-gradient-to-t from-slate-800 to-slate-500 min-h-screen ">
         <SearchBar onSearchChange={handleOnSearchChange} />
         {currentWeather ? (
-          <div className="lg:flex lg:flex-row lg:gap-4 flex flex-col gap-7">
+          <div className="lg:flex lg:flex-row lg:gap-4 lg:flex-grow flex flex-col gap-7">
             <CityCard data={currentWeather} icon={icon} />
           </div>
         ) : (
@@ -93,7 +93,7 @@ function App() {
             No data available yet. Do a search for weather 🌤️ information.
           </div>
         )}
-        <footer className="pb-[30px] text-white">Made by Miguel Dario Garcia Quintas</footer>
+        <footer className="pb-[30px] mt-auto text-white">Made by Miguel Dario Garcia Quintas</footer>
       </div>
     </>
   );
