@@ -27,7 +27,7 @@ function App() {
 
         const currentWeather = await responseCurrentWeather.json();
         const forecastWeather = await responseForecast.json();
-        console.log("Current weather", currentWeather);
+        //console.log("Current weather", currentWeather);
         //console.log("Forecast", forecastWeather);
 
         setCurrentWeather({
